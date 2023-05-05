@@ -1,0 +1,542 @@
+<html>
+    <head>
+        <title>Virtual</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+       <script src="my_jquery_functions.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" 
+       integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       
+       <style>
+            .navbar-brand{
+                margin-left: 45px;
+                font-size: 37px;
+                font-family: cursive;
+                color: rgb(59, 29, 12);
+            }
+
+            .nav-item{
+        
+                color: rgb(59, 29, 12);
+                font-size: 20px;
+                font-family: sans-serif;
+                margin-left: 10px;
+
+            }
+            .dropdown-menu{
+                display: none;
+            }
+            .nav-link:hover +.dropdown-menu{
+                display: block;
+            }
+
+            .card-full{
+            text-decoration: none;
+            }
+
+            .footer .icon--call1, .icon--mail1 ,.event--plan ,.connected--with ,.last--footer{
+              color: white;
+              text-decoration: none;
+
+            }
+            .footer .event--plan .bday{
+
+              text-decoration: none;
+              color: white;
+            }
+            .footer .last--footer .home{
+              text-decoration: none;
+              color: white;
+            }
+
+
+           
+            .card--part1 ,.card--part2 ,.card--part3 ,.card--part4 ,.card--part5 ,.card--part6 ,.card--part7 ,.card--part8 ,
+            .card--part9 ,.card--part10 ,.card--part11 ,.card--part12 {
+           opacity:0;
+             }
+             .icon--call1 ,.icon--mail1, .event--plan , .connected--with , .last--footer{
+      opacity: 0;
+    }
+
+             .card--part1 .animate__animated ,.card--part2 .animate__animated ,.card--part3 .animate__animated ,
+             .card--part4 .animate__animated,.card--part5 .animate__animated,.card--part6 .animate__animated,
+             .card--part7 .animate__animated,.card--part8 .animate__animated,
+            .card--part9 .animate__animated,.card--part10 .animate__animated,.card--part11 .animate__animated ,.card--part12 .animate__animated ,
+            .icon--call1 .animate__animated, .icon--mail1 .animate__animated ,.event--plan
+    .animate__animated , .connected--with .animate__animated , .last--footer .animate__animated
+             {
+           opacity:1;
+             }
+
+
+        </style>
+        </head>
+        <body>
+            <nav class="navbar navbar-expand-xl navbar-light bg-danger-subtle fixed-top">
+                
+                <a href="vibe.html" class="navbar-brand "><b>#Vibe</b></a>
+
+         <form class="form-inline my-2 my-lg-0 ms-5">             
+        <input type="search" class="form-control justify-content-md-center" placeholder="login"></form> 
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       
+
+        <ul class="navbar-nav mr-auto m-5">
+             <li class="nav-item active">
+               <a href="home.html" class="nav-link justify-content-md-center">Home</a>
+             </li>
+
+            
+             
+             <li class="nav-item dropdown  ">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+            aria-expanded="false"> Venues</a>
+  
+              <div class="dropdown-menu">
+                  <a href="party lawns.html" class="dropdown-item">Banquet Halls</a>
+                  <a href="party lawns.html" class="dropdown-item"> Hotels</a>
+                  <a href="party lawns.html" class="dropdown-item">Resorts</a>
+                  <a href="party lawns.html" class="dropdown-item">Marriage Halls</a>
+                  <a href="party lawns.html" class="dropdown-item">Party Lawns</a>
+             </div>
+             </li>
+
+             <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+              aria-expanded="false"> Memories</a>
+    
+                <div class="dropdown-menu">
+                    <a href="event.html" class="dropdown-item">Events</a>
+                    <a href="gallery section.html" class="dropdown-item"> Gallery Section</a>
+               </div>
+               </li>
+
+               <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+              aria-expanded="false"> E-invitation</a>
+    
+                <div class="dropdown-menu">
+                    <h5 style="color:brown; margin-left: 20px;">Birthday</h5>
+                    <a href="birthday.html" class="dropdown-item">Boy's Birthday</a>
+                    <a href="birthday.html" class="dropdown-item">Girl's Birthday</a>
+                     <br>
+                    <h5 style="color:brown; margin-left: 20px;">Party</h5>
+
+                    <a href="childern.html" class="dropdown-item">Children Party</a>
+                    <a href="virtual.html" class="dropdown-item">Virtual Party</a>
+                 
+                    <a href="gallery section.html" class="dropdown-item">House Party</a>
+                    <a href="gallery section.html" class="dropdown-item">Family Function</a>
+               
+                    <a href="gallery section.html" class="dropdown-item">Enagagement </a>
+                    <a href="gallery section.html" class="dropdown-item">Anniversary party</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Anniversary</a>
+                    <a href="gallery section.html" class="dropdown-item">Pool party</a>
+                  
+
+                       <br>
+
+                    <h5 style="color:brown;  margin-left: 20px;">Wedding</h5>
+
+                    <a href="gallery section.html" class="dropdown-item">Ring Ceremony</a>
+                    <a href="gallery section.html" class="dropdown-item">Roka Ceremony</a>
+                    <a href="gallery section.html" class="dropdown-item">Haldi Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Mehendi Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Sangeet Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Day</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Reception</a>
+                    <br>
+
+                    <h5 style="color:brown;  margin-left: 20px;">Festivals</h5>
+
+                    
+                    <a href="festival.html" class="dropdown-item">New Year Party</a>
+                    <a href="festival.html" class="dropdown-item">Christmas Party</a>
+                    <a href="festival.html" class="dropdown-item">Holi Party</a>
+                    <a href="festival.html" class="dropdown-item">Diwali Party</a>
+                
+               </div>
+               </li>
+           
+
+
+            <li class="nav-item active">
+                <a href="About us.html" class="nav-link justify-content-md-center">About us</a>
+              </li>  
+              <li class="nav-item active">
+                <a href="contact us.html" class="nav-link justify-content-md-center">Contact us</a>
+              </li> 
+
+            <!-- <li class="nav-item active">
+                <a href="#" class="nav-link  justify-content-md-center">Blog</a>
+                </li> -->
+
+        </ul>
+      </div>
+
+             </nav><br><br><br><br><br><br> 
+
+             <h3 class=" bdy  text-center mt-5">Virtual Party</h3><br><br>
+             <div class="row">
+
+               <div class="col-md-2 card--part1">
+                 <div class="card">
+                   <div class="card-img">
+                     <img src="venue img/virtual1.jfif"  class="img-fluid" alt="">
+                     <div class="card-body">
+                      <h5 class="card-title">Virtual Birthday Party</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                 </div>
+               </div>
+               </div>
+    
+               <div class="col-md-2 card--part2">
+                 <div class="card">
+                   <div class="card-img">
+                     <img src="venue img/virtual2.jfif"  class="img-fluid" alt="">
+                     <div class="card-body">
+                      <h5 class="card-title">Virtual Birthday Party</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class="col-md-2 card--part3">
+                 <div class="card">
+                   <div class="card-img">
+                     <img src="venue img/virtual3.jfif"  class="img-fluid" alt="">
+                     <div class="card-body">
+                      <h5 class="card-title">Virtual Birthday Party</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class="col-md-2 card--part4">
+                 <div class="card">
+                   <div class="card-img">
+                     <img src="venue img/virtual4.jfif"  class="img-fluid" alt="">
+                     <div class="card-body">
+                      <h5 class="card-title">Virtual Party with family</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class="col-md-2 card--part5">
+                 <div class="card">
+                   <div class="card-img">
+                     <img src="venue img/virtual7.jfif"  class="img-fluid" alt="">
+                     <div class="card-body">
+                      <h5 class="card-title">Virtual Party with friends</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                   </div>
+                 </div>
+                </div>
+              
+            <div class="col-md-2 card--part6">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="venue img/virtual13.jfif"  class="img-fluid" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Virtual kids Birthday Party</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 card--part7">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="venue img/virtual14.jfif"  class="img-fluid" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Virtual kids  presentation Party</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 card--part8">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="venue img/virtual17.jfif"  class="img-fluid" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title mt-3">Virtual office Party</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-2 card--part9">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="venue img/virtual9.jfif"  class="img-fluid" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title mt-4">Virtual Party with kids</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                  </div>
+                </div>
+              </div> 
+
+             
+
+             <div class="col-md-2 card--part10">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="venue img/virtual15.jfif"  class="img-fluid" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title mt-4">Virtual festival Party with friends</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="col-md-2 card--part11">
+                 <div class="card">
+                   <div class="card-img">
+                     <img src="venue img/virtual5.jfif"  class="img-fluid" alt="">
+                     <div class="card-body">
+                      <h5 class="card-title mt-3">Virtual Party celebration with kids</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                   </div>
+                 </div>
+               </div>
+
+               <div class="col-md-2 card--part12">
+                 <div class="card">
+                   <div class="card-img">
+                     <img src="venue img/virtual6.jfif"  class="img-fluid" alt="">
+                     <div class="card-body">
+                      <h5 class="card-title mt-4">Virtual celebration with office staff</h5>
+                      <p class="card-text">Starting Price: Negotiable</p>
+                      <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                   </div>
+                   </div>
+                 </div>
+               </div> 
+
+             </div> 
+
+             <div class="footer bg-dark mt-5">
+              <div class="row text-center ">
+                <div class="col-md-6 mt-5 icon--call1">
+                  <img src="venue img/call-icon.png" alt="call"> Call : +9195XXXXXXXX
+                </div>
+                <div class="col-md-6 mt-5 icon--mail1">
+                  <img src="venue img/mail-icon.png" alt="mail"> Mail : info@vibe.com
+                </div>
+                <div class="col-md-6 mt-5 event--plan">
+                  <h5>Event Planning Service</h5>
+                  <p class="plan"><a href="birthday.html" class="bday">Birthday Planning</a>  |<a href="event.html" class="bday"> Event Planning</a>
+                    |<a href="gallery section.html" class="bday">   Party Supplies</a> |<br><a href="gallery section.html" class="bday">
+                  Wedding Planning </a> |<a href="gallery section.html" class="bday">   Reception Planning</a></p>
+                </div>
+            
+                <div class="col-md-6 mt-5 connected--with">
+                  <h5 class="stay">Stay Connected With Us:</h5>
+                  <a href="https://www.instagram.com"> <img src="venue img/instagram.png " alt="instagram" width="40px"></a>
+                  <a href="https://www.facebook.com"><img src="venue img/facebook.webp" alt="facebook" width="40px"></a>
+                   <a href="https://www.google.com"><img src="venue img/google.webp" alt="google" width="40px"></a>
+            
+                </div>
+            
+                <div class="col-md-12 mt-5 last--footer">
+                  <a href="home.html" class="home">Home |</a>  
+                  <a href="About us.html" class="home">About us |</a> 
+                  <a href="contact us.html" class="home">Contact us</a>  
+            
+                </div>
+            
+              </div>
+            
+            </div>
+
+
+            <script>
+              $(document).ready(function(){
+                $('.card--part1').waypoint(function(direction){
+                 $('.card--part1').addClass('animate__animated animate__fadeInDown ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.card--part2').waypoint(function(direction){
+                  $('.card--part2').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part3').waypoint(function(direction){
+                  $('.card--part3').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+                $(document).ready(function(){
+                $('.card--part4').waypoint(function(direction){
+                  $('.card--part4').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part5').waypoint(function(direction){
+                  $('.card--part5').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part6').waypoint(function(direction){
+                  $('.card--part6').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part7').waypoint(function(direction){
+                  $('.card--part7').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part8').waypoint(function(direction){
+                  $('.card--part8').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part9').waypoint(function(direction){
+                  $('.card--part9').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part10').waypoint(function(direction){
+                  $('.card--part10').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part11').waypoint(function(direction){
+                  $('.card--part11').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.card--part12').waypoint(function(direction){
+                  $('.card--part12').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              
+            
+              
+    $(document).ready(function(){
+$('.icon--call1').waypoint(function(direction){
+$('.icon--call1').addClass('animate__animated animate__fadeInLeft animate__delay-1s')
+} ,{
+offset:'80%'
+})
+});
+
+$(document).ready(function(){
+$('.icon--mail1').waypoint(function(direction){
+$('.icon--mail1').addClass('animate__animated animate__fadeInRight animate__delay-1s')
+} ,{
+offset:'80%'
+})
+});
+
+$(document).ready(function(){
+$('.event--plan').waypoint(function(direction){
+$('.event--plan').addClass('animate__animated animate__fadeInLeft animate__delay-1s')
+} ,{
+offset:'80%'
+})
+});
+
+$(document).ready(function(){
+$('.connected--with').waypoint(function(direction){
+$('.connected--with').addClass('animate__animated animate__fadeInRight animate__delay-1s')
+} ,{
+offset:'80%'
+})
+});
+
+$(document).ready(function(){
+$('.last--footer').waypoint(function(direction){
+$('.last--footer').addClass('animate__animated animate__bounceIn animate__delay-1s')
+} ,{
+offset:'80%'
+})
+});
+
+
+            
+            
+            
+              
+            
+            </script>
+
+
+
+             
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"> </script>
+
+            </body>
+    </html>

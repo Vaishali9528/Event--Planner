@@ -1,0 +1,801 @@
+<html>
+    <head>
+        <title>birthday</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+       <script src="my_jquery_functions.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" 
+       integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       
+       <style>
+            .navbar-brand{
+                margin-left: 45px;
+                font-size: 37px;
+                font-family: cursive;
+                color: rgb(59, 29, 12);
+            }
+
+            .nav-item{
+        
+                color: rgb(59, 29, 12);
+                font-size: 20px;
+                font-family: sans-serif;
+                margin-left: 10px;
+
+            }
+            .dropdown-menu{
+                display: none;
+            }
+            .nav-link:hover +.dropdown-menu{
+                display: block;
+            }
+
+
+            .col-md-6{
+      color: white;
+      font-size: 20px;
+      
+    }
+
+    .bday{
+      text-decoration: none;
+      color: white;  
+    }
+    .bday:hover{
+      color: grey;
+    }
+    .home{
+      text-decoration: none;
+      color: white;
+    }
+    .home:hover{
+      color: grey;
+    }
+    .card-full{
+      text-decoration: none;
+    }
+    .boy--part1,.boy--part2,.boy--part3,.boy--part4,.boy--part5,.boy--part6,.boy--part7,.boy--part8,.boy--part9,.boy--part10,
+    .boy--part11,.boy--part12,
+    .girl--part1,.girl--part2,.girl--part3,.girl--part4,.girl--part5,.girl--part6,.girl--part7,.girl--part8,.girl--part9,
+    .girl--part10,.girl--part11,.girl--part12,
+    .icon--call1 ,.icon--mail1,.event--plan , .connected--with , .last--footer{
+      opacity:0;
+    }
+
+    .boy--part1 .animate__animated,.boy--part2 .animate__animated,.boy--part3 .animate__animated,.boy--part4 .animate__animated,
+    .boy--part5 .animate__animated,.boy--part6 .animate__animated,.boy--part7 .animate__animated,.boy--part8 .animate__animated,
+    .boy--part9 .animate__animated,.boy--part10 .animate__animated,
+    .boy--part11 .animate__animated,.boy--part12 .animate__animated,
+    .girl--part1 .animate__animated,.girl--part2 .animate__animated,.girl--part3 .animate__animated,
+    .girl--part4 .animate__animated,.girl--part5 .animate__animated,.girl--part6 .animate__animated,.girl--part7 .animate__animated,
+    .girl--part8 .animate__animated,.girl--part9 .animate__animated,
+    .girl--part10 .animate__animated,.girl--part11 .animate__animated,.girl--part12 .animate__animated,
+    .icon--call1 .animate__animated, .icon--mail1 .animate__animated ,.event--plan
+    .animate__animated , .connected--with .animate__animated , .last--footer .animate__animated
+      {
+      opacity:1;
+
+    }
+    
+  
+
+
+
+        </style>
+        </head>
+        <body>
+            <nav class="navbar navbar-expand-xl navbar-light bg-danger-subtle fixed-top">
+                
+                <a href="vibe.html" class="navbar-brand "><b>#Vibe</b></a>
+
+         <form class="form-inline my-2 my-lg-0 ms-5">             
+        <input type="search" class="form-control justify-content-md-center" placeholder="login"></form> 
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       
+
+        <ul class="navbar-nav mr-auto m-5">
+             <li class="nav-item active">
+               <a href="home.html" class="nav-link justify-content-md-center">Home</a>
+             </li>
+
+            
+             
+             <li class="nav-item dropdown  ">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+            aria-expanded="false"> Venues</a>
+  
+              <div class="dropdown-menu">
+                  <a href="party lawns.html" class="dropdown-item">Banquet Halls</a>
+                  <a href="party lawns.html" class="dropdown-item"> Hotels</a>
+                  <a href="party lawns.html" class="dropdown-item">Resorts</a>
+                  <a href="party lawns.html" class="dropdown-item">Marriage Halls</a>
+                  <a href="party lawns.html" class="dropdown-item">Party Lawns</a>
+             </div>
+             </li>
+
+             <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+              aria-expanded="false"> Memories</a>
+    
+                <div class="dropdown-menu">
+                    <a href="event.html" class="dropdown-item">Events</a>
+                    <a href="gallery section.html" class="dropdown-item"> Gallery Section</a>
+               </div>
+               </li>
+
+               <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+              aria-expanded="false"> E-invitation</a>
+    
+                <div class="dropdown-menu">
+                    <h5 style="color:brown; margin-left: 20px;">Birthday</h5>
+                    <a href="birthday.html" class="dropdown-item">Boy's Birthday</a>
+                    <a href="birthday.html" class="dropdown-item">Girl's Birthday</a>
+                     <br>
+                    <h5 style="color:brown; margin-left: 20px;">Party</h5>
+
+                    <a href="childern.html" class="dropdown-item">Children Party</a>
+                    <a href="virtual.html" class="dropdown-item">Virtual Party</a>
+                    <a href="gallery section.html" class="dropdown-item">House Party</a>
+                    <a href="gallery section.html" class="dropdown-item">Family Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Enagagement </a>
+                    <a href="gallery section.html" class="dropdown-item">Anniversary party</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Anniversary</a>
+                    <a href="gallery section.html" class="dropdown-item">Pool party</a>
+    
+
+                       <br>
+
+                    <h5 style="color:brown;  margin-left: 20px;">Wedding</h5>
+
+                    <a href="gallery section.html" class="dropdown-item">Ring Ceremony</a>
+                    <a href="gallery section.html" class="dropdown-item">Roka Ceremony</a>
+                    <a href="gallery section.html" class="dropdown-item">Haldi Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Mehendi Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Sangeet Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Day</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Reception</a>
+                    <br>
+
+                    <h5 style="color:brown;  margin-left: 20px;">Festivals</h5>
+
+              
+                    <a href="festival.html" class="dropdown-item">New Year Party</a>
+                    <a href="festival.html" class="dropdown-item">Christmas Party</a>
+                    <a href="festival.html" class="dropdown-item">Holi Party</a>
+                    <a href="festival.html" class="dropdown-item">Diwali Party</a>
+                
+               </div>
+               </li>
+           
+
+
+            <li class="nav-item active">
+                <a href="About us.html" class="nav-link justify-content-md-center">About us</a>
+              </li>  
+              <li class="nav-item active">
+                <a href="contact us.html" class="nav-link justify-content-md-center">Contact us</a>
+              </li> 
+
+            <!-- <li class="nav-item active">
+                <a href="#" class="nav-link  justify-content-md-center">Blog</a>
+                </li> -->
+        </ul>
+      </div>
+
+             </nav><br><br><br><br><br><br>
+
+             <h3 class=" bdy  text-center mt-5">Boy's Birthday Decoration</h3><br><br>
+                <div class="row">
+
+                  <div class="col-md-2 boy--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy1.1.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 boy--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy1.2.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Circle Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-2 boy--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy1.3.jfif"   class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 boy--part4">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy1.4.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Moon & Star Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 boy--part5">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy1.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Car & Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+              
+
+                  <div class="col-md-2 boy--part6">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy4.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Floor Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="col-md-2 boy--part7">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy2.4.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">BenTen Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="col-md-2 boy--part8">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy2.6.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple  Theme Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 boy--part9">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy2.7.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Theme party Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-2 boy--part10">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy3.6.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">TeadyBear Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 boy--part11">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy3.9.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Cartoon Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 boy--part12">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/bdy4.1.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Rainbow Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+                <h3 class=" bdy  text-center mt-5">Girl's Birthday Decoration</h3><br><br>
+                <div class="row">
+
+                  <div class="col-md-2 girl--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Curtain With Light Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 girl--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl1.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-2 girl--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl2.webp"   class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Pink Balloons Theme Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 girl--part4">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl3.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Circle Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 girl--part5">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl4.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Simple Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-2 girl--part6">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl5.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Cabana Tent Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-2 girl--part7">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl1.1.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Peach Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               
+
+                  <div class="col-md-2 girl--part8">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl1.2.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Heart Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 girl--part9">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl1.4.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Rainbow Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 girl--part10">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl1.5.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Room Decoration with Balloons</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 girl--part11">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl1.7.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple Decoration with Balloons</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 girl--part12">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/girl1.8.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Floor Balloons Decoration</h5>
+                          <p class="card-text">Starting Price: Negotiable</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                      
+                </div>
+
+
+                <div class="footer bg-dark mt-5">
+                  <div class="row text-center ">
+                    <div class="col-md-6 mt-5 icon--call1">
+                      <img src="venue img/call-icon.png" alt="call"> Call : +9195XXXXXXXX
+                    </div>
+                    <div class="col-md-6 mt-5 icon--mail1">
+                      <img src="venue img/mail-icon.png" alt="mail"> Mail : info@vibe.com
+                    </div>
+                    <div class="col-md-6 mt-5 event--plan">
+                      <h5>Event Planning Service</h5>
+                      <p class="plan"><a href="birthday.html" class="bday">Birthday Planning</a>  |<a href="event.html" class="bday"> Event Planning</a>
+                        |<a href="gallery section.html" class="bday">   Party Supplies</a> |<br><a href="gallery section.html" class="bday">
+                      Wedding Planning </a> |<a href="gallery section.html" class="bday">   Reception Planning</a></p>
+                    </div>
+                
+                    <div class="col-md-6 mt-5 connected--with">
+                      <h5 class="stay">Stay Connected With Us:</h5>
+                      <a href="https://www.instagram.com"> <img src="venue img/instagram.png " alt="instagram" width="40px"></a>
+                      <a href="https://www.facebook.com"><img src="venue img/facebook.webp" alt="facebook" width="40px"></a>
+                       <a href="https://www.google.com"><img src="venue img/google.webp" alt="google" width="40px"></a>
+                
+                    </div>
+                
+                    <div class="col-md-12 mt-5 last--footer">
+                      <a href="home.html" class="home">Home |</a>  
+                      <a href="About us.html" class="home">About us |</a> 
+                      <a href="contact us.html" class="home">Contact us</a>  
+                
+                    </div>
+                
+                  </div>
+                
+                </div>
+        
+        
+                <script>
+
+               $(document).ready(function(){
+                $('.boy--part1').waypoint(function(direction){
+                 $('.boy--part1').addClass('animate__animated animate__fadeInDown ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.boy--part2').waypoint(function(direction){
+                  $('.boy--part2').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.boy--part3').waypoint(function(direction){
+                  $('.boy--part3').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.boy--part4').waypoint(function(direction){
+                  $('.boy--part4').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.boy--part5').waypoint(function(direction){
+                  $('.boy--part5').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.boy--part6').waypoint(function(direction){
+                  $('.boy--part6').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.boy--part7').waypoint(function(direction){
+                  $('.boy--part7').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.boy--part8').waypoint(function(direction){
+                  $('.boy--part8').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.boy--part9').waypoint(function(direction){
+                  $('.boy--part9').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.boy--part10').waypoint(function(direction){
+                  $('.boy--part10').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.boy--part11').waypoint(function(direction){
+                  $('.boy--part11').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.boy--part12').waypoint(function(direction){
+                  $('.boy--part12').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+
+              $(document).ready(function(){
+                $('.girl--part1').waypoint(function(direction){
+                 $('.girl--part1').addClass('animate__animated animate__fadeInLeft ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.girl--part2').waypoint(function(direction){
+                  $('.girl--part2').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.girl--part3').waypoint(function(direction){
+                  $('.girl--part3').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.girl--part4').waypoint(function(direction){
+                  $('.girl--part4').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.girl--part5').waypoint(function(direction){
+                  $('.girl--part5').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.girl--part6').waypoint(function(direction){
+                  $('.girl--part6').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.girl--part7').waypoint(function(direction){
+                  $('.girl--part7').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.girl--part8').waypoint(function(direction){
+                  $('.girl--part8').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.girl--part9').waypoint(function(direction){
+                  $('.girl--part9').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.girl--part10').waypoint(function(direction){
+                  $('.girl--part10').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.girl--part11').waypoint(function(direction){
+                  $('.girl--part11').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.girl--part12').waypoint(function(direction){
+                  $('.girl--part12').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+
+
+          $(document).ready(function(){
+            $('.icon--call1').waypoint(function(direction){
+              $('.icon--call1').addClass('animate__animated animate__fadeInLeft animate__delay-1s')
+            } ,{
+              offset:'80%'
+            })
+          });
+        
+                   $(document).ready(function(){
+            $('.icon--mail1').waypoint(function(direction){
+              $('.icon--mail1').addClass('animate__animated animate__fadeInRight animate__delay-1s')
+            } ,{
+              offset:'80%'
+            })
+          });
+        
+          $(document).ready(function(){
+            $('.event--plan').waypoint(function(direction){
+              $('.event--plan').addClass('animate__animated animate__fadeInLeft animate__delay-1s')
+            } ,{
+              offset:'80%'
+            })
+          });
+        
+          $(document).ready(function(){
+            $('.connected--with').waypoint(function(direction){
+              $('.connected--with').addClass('animate__animated animate__fadeInRight animate__delay-1s')
+            } ,{
+              offset:'80%'
+            })
+          });
+        
+          $(document).ready(function(){
+            $('.last--footer').waypoint(function(direction){
+              $('.last--footer').addClass('animate__animated animate__bounceIn animate__delay-1s')
+            } ,{
+              offset:'80%'
+            })
+          });
+                </script>
+
+             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"> </script>
+
+        </body>
+</html>

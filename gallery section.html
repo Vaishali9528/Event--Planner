@@ -1,0 +1,2073 @@
+<html>
+    <head>
+        <title>gallery section</title>
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+       <script src="my_jquery_functions.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" 
+       integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       
+       <style>
+            .navbar-brand{
+                margin-left: 45px;
+                font-size: 37px;
+                font-family: cursive;
+                color: rgb(59, 29, 12);
+            }
+
+            .nav-item{
+        
+                color: rgb(59, 29, 12);
+                font-size: 20px;
+                font-family: sans-serif;
+                margin-left: 10px;
+            }
+            .dropdown-menu{
+                display: none;
+            }
+            .nav-link:hover +.dropdown-menu{
+                display: block;
+            }
+
+            @media (max-width: 767px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}
+    
+		 .carousel-inner .carousel-item > div:first-child {
+			display: block;
+		} 
+	    }
+
+    .carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	   }
+   
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+
+		.carousel-inner .carousel-item-end.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(25%);
+		}
+
+		.carousel-inner .carousel-item-start.active, 
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-25%);
+		}
+	}
+
+	.carousel-inner .carousel-item-end,
+	.carousel-inner .carousel-item-start { 
+		transform: translateX(0);
+	}
+
+  .col-md-6{
+      color: white;
+      font-size: 20px;
+      
+    }
+
+    .bday{
+      text-decoration: none;
+      color: white;  
+    }
+    .bday:hover{
+      color: grey;
+    }
+    .home{
+      text-decoration: none;
+      color: white;
+    }
+    .home:hover{
+      color: grey;
+    }
+    /* .flower{
+      margin-top: 500px;
+    } */
+    .card-full{
+      text-decoration: none;
+    }
+    .haldi--part1,.haldi--part2,.haldi--part3,.haldi--part4,.haldi--part5,.haldi--part6,.haldi--part7,.haldi--part8,
+    .haldi--part9,.haldi--part10,.haldi--part11,.haldi--part12,.mehendi--part1,.mehendi--part2,.mehendi--part3,.mehendi--part4,
+    .mehendi--part5,.mehendi--part6,.mehendi--part7,.mehendi--part8,.sangeet--part1,.sangeet--part2,.sangeet--part3,
+    .sangeet--part4,.sangeet--part5,.sangeet--part6,.sangeet--part7,.sangeet--part8,.cocktail--part1,.cocktail--part2,
+    .cocktail--part3,.cocktail--part4,.cocktail--part5,.cocktail--part6,.cocktail--part7,.cocktail--part8,.reception--part1,
+    .reception--part2,  .reception--part3,  .reception--part4,  .reception--part5,  .reception--part6,  .reception--part7,
+    .reception--part8,.wedding--part1,.wedding--part2,.wedding--part3,.wedding--part4,.wedding--part5,.wedding--part6,
+    .wedding--part7,.wedding--part8,.mandap--part1,.mandap--part2,.mandap--part3,.mandap--part4,.mandap--part5,.mandap--part6,
+    .mandap--part7,.mandap--part8,.pool--part1,.pool--part2,.pool--part3,.pool--part4,.pool--part5,.pool--part6,.pool--part7,
+    .pool--part8{
+      opacity: 0;
+    }
+
+    .haldi--part1  .animate__animated,.haldi--part2  .animate__animated,.haldi--part3  .animate__animated,
+    .haldi--part4  .animate__animated,.haldi--part5  .animate__animated,.haldi--part6  .animate__animated,
+    .haldi--part7  .animate__animated,.haldi--part8  .animate__animated,
+    .haldi--part9  .animate__animated,.haldi--part10  .animate__animated,.haldi--part11  .animate__animated,.haldi--part12  .animate__animated,
+    .mehendi--part1  .animate__animated,.mehendi--part2  .animate__animated,.mehendi--part3  .animate__animated,
+    .mehendi--part4  .animate__animated,.mehendi--part5  .animate__animated,.mehendi--part6  .animate__animated,
+    .mehendi--part7  .animate__animated,.mehendi--part8  .animate__animated,.sangeet--part1  .animate__animated,
+    .sangeet--part2  .animate__animated,.sangeet--part3  .animate__animated,
+    .sangeet--part4  .animate__animated,.sangeet--part5  .animate__animated,.sangeet--part6  .animate__animated,
+    .sangeet--part7  .animate__animated,.sangeet--part8  .animate__animated,.cocktail--part1  .animate__animated,
+    .cocktail--part2  .animate__animated,
+    .cocktail--part3  .animate__animated,.cocktail--part4  .animate__animated,.cocktail--part5  .animate__animated,
+    .cocktail--part6  .animate__animated,.cocktail--part7  .animate__animated,.cocktail--part8  .animate__animated,
+    .reception--part1  .animate__animated,
+    .reception--part2  .animate__animated,  .reception--part3  .animate__animated,  .reception--part4  .animate__animated, 
+     .reception--part5  .animate__animated,  .reception--part6  .animate__animated,  .reception--part7  .animate__animated,
+    .reception--part8  .animate__animated,.wedding--part1  .animate__animated,.wedding--part2  .animate__animated,
+    .wedding--part3   .animate__animated ,.wedding--part4   .animate__animated,.wedding--part5   .animate__animated,
+    .wedding--part6   .animate__animated,
+    .wedding--part7   .animate__animated,.wedding--part8   .animate__animated,.mandap--part1   .animate__animated,
+    .mandap--part2   .animate__animated,.mandap--part3   .animate__animated,.mandap--part4   .animate__animated,
+    .mandap--part5   .animate__animated,.mandap--part6   .animate__animated,
+    .mandap--part7   .animate__animated,.mandap--part8   .animate__animated,.pool--part1   .animate__animated,
+    .pool--part2   .animate__animated,.pool--part3   .animate__animated,.pool--part4   .animate__animated,.pool--part5   .animate__animated,
+    .pool--part6   .animate__animated,.pool--part7   .animate__animated,
+    .pool--part8   .animate__animated{
+      opacity: 1;
+    }
+
+
+
+        </style>
+        </head>
+        <body>
+             <nav class="navbar navbar-expand-xl navbar-light bg-danger-subtle fixed-top">
+                
+                <a href="vibe.html" class="navbar-brand "><b>#Vibe</b></a>
+
+         <form class="form-inline my-2 my-lg-0 ms-5">             
+        <input type="search" class="form-control justify-content-md-center" placeholder="login"></form> 
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+       
+
+        <ul class="navbar-nav mr-auto m-5">
+             <li class="nav-item active">
+               <a href="home.html" class="nav-link justify-content-md-center">Home</a>
+             </li>
+
+            
+             
+             <li class="nav-item dropdown  ">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+            aria-expanded="false"> Venues</a>
+  
+              <div class="dropdown-menu">
+                  <a href="party lawns.html" class="dropdown-item">Banquet Halls</a>
+                  <a href="party lawns.html" class="dropdown-item"> Hotels</a>
+                  <a href="party lawns.html" class="dropdown-item">Resorts</a>
+                  <a href="party lawns.html" class="dropdown-item">Marriage Halls</a>
+                  <a href="party lawns.html" class="dropdown-item">Party Lawns</a>
+             </div>
+             </li>
+
+             <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+              aria-expanded="false"> Memories</a>
+    
+                <div class="dropdown-menu">
+                    <a href="event.html" class="dropdown-item">Events</a>
+                    <a href="gallery section.html" class="dropdown-item"> Gallery Section</a>
+               </div>
+               </li>
+
+               <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" 
+              aria-expanded="false"> E-invitation</a>
+    
+                <div class="dropdown-menu">
+                    <h5 style="color:brown; margin-left: 20px;">Birthday</h5>
+                    <a href="birthday.html" class="dropdown-item">Boy's Birthday</a>
+                    <a href="birthday.html" class="dropdown-item">Girl's Birthday</a>
+                     <br>
+                    <h5 style="color:brown; margin-left: 20px;">Party</h5>
+
+                    <a href="childern.html" class="dropdown-item">Children Party</a>
+                    <a href="virtual.html" class="dropdown-item">Virtual Party</a>
+           
+                    <a href="gallery section.html" class="dropdown-item">House Party</a>
+                   
+                    <a href="gallery section.html" class="dropdown-item">Family Function</a>
+           
+                    <a href="gallery section.html" class="dropdown-item">Enagagement </a>
+                    <a href="gallery section.html" class="dropdown-item">Anniversary party</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Anniversary</a>
+                    <a href="gallery section.html" class="dropdown-item">Pool party</a>
+                   
+
+                       <br>
+
+                    <h5 style="color:brown;  margin-left: 20px;">Wedding</h5>
+
+                    <a href="gallery section.html" class="dropdown-item">Ring Ceremony</a>
+                    <a href="gallery section.html" class="dropdown-item">Roka Ceremony</a>
+                    <a href="gallery section.html" class="dropdown-item">Haldi Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Mehendi Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Sangeet Function</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Day</a>
+                    <a href="gallery section.html" class="dropdown-item">Wedding Reception</a>
+                    <br>
+
+                    <h5 style="color:brown;  margin-left: 20px;">Festivals</h5>
+
+        
+                    <a href="festival.html" class="dropdown-item">New Year Party</a>
+                    <a href="festival.html" class="dropdown-item">Christmas Party</a>
+                    <a href="festival.html" class="dropdown-item">Holi Party</a>
+                    <a href="festival.html" class="dropdown-item">Diwali Party</a>
+                
+               </div>
+               </li>
+           
+
+
+            <li class="nav-item active">
+                <a href="About us.html" class="nav-link justify-content-md-center">About us</a>
+              </li>  
+              <li class="nav-item active">
+                <a href="contact us.html" class="nav-link justify-content-md-center">Contact us</a>
+              </li> 
+
+            <!-- <li class="nav-item active">
+                <a href="#" class="nav-link  justify-content-md-center">Blog</a>
+                </li> -->
+        </ul>
+      </div>
+
+             </nav><br><br><br><br><br><br> 
+ 
+
+            <h3 class="flower mt-5 text-center">Flower Decoration</h3><br>
+
+            <div class="container text-center my-3">
+                <div class="row mx-auto my-auto justify-content-center">
+                <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                <!-- <div class="carousel-item active" data-bs-interval="5000"> -->
+                
+                
+                <div class="carousel-item vs active">
+                <div class="col-md-3">
+                <div class="card">
+                <div class="card-img">
+                <img src="venue img/flower decor1.webp" class="img-fluid" alt="flower">
+                <div class="card-body">
+                  <h5 class="card-title">Flower Decoration</h5>
+                  <p class="card-text">For night party & more...</p>
+                  <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+    
+    
+                <div class="carousel-item vs active">
+                <div class="col-md-3">
+                <div class="card">
+                <div class="card-img">
+                <img src= "venue img/flower decor2.webp"  class="img-fluid" alt="flower">
+                <div class="card-body">
+                    <h5 class="card-title">Flower Decoration</h5>
+                    <p class="card-text">for Day Function...</p></p>
+                    <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                  </div>
+                </div>
+                </div>
+                </div>
+                </div>
+    
+    
+                <div class="carousel-item vs">
+                <div class="col-md-3">
+                <div class="card">
+                <div class="card-img">
+                <img src="venue img/flower decor3.webp" class="img-fluid" alt="flower" >
+                <div class="card-body">
+                    <h5 class="card-title">Flower Decoration</h5>
+                    <p class="card-text">for Party & more...</p>
+                    <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                  </div>                     
+                </div>
+                </div>
+                </div>
+                </div>
+    
+    
+                <div class="carousel-item vs">
+                <div class="col-md-3">
+                <div class="card">
+                <div class="card-img ">
+                <img src="venue img/flower decor4.webp"  class="img-fluid" alt="flower" >  
+                <div class="card-body">
+                    <h5 class="card-title">Flower Decoration</h5>
+                    <p class="card-text">for Party & more...</p>
+                    <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                  </div>                          
+                </div>
+                </div>
+                </div>
+                </div>
+    
+    
+                <div class="carousel-item vs">
+                <div class="col-md-3">
+                <div class="card">
+                <div class="card-img">
+                <img src="venue img/flower decor5.webp"  class="img-fluid" alt="flower"> 
+                <div class="card-body">
+                    <h5 class="card-title">Flower Decoration</h5>
+                    <p class="card-text">For Day Function & more..</p>
+                    <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                  </div>                      
+                </div>
+                </div>
+                </div>
+                </div>
+    
+    
+                <div class="carousel-item vs">
+                <div class="col-md-3">
+                <div class="card">
+                <div class="card-img">
+                <img src="venue img/flower decor6.webp"  class="img-fluid" alt="flower"> 
+                <div class="card-body">
+                    <h5 class="card-title">Flower Decoration</h5>
+                    <p class="card-text">For Day Function & more..</p>
+                    <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                </div>                 
+                </div>
+                </div>
+                </div>
+                </div>
+    
+                <div class="carousel-item vs">
+                <div class="col-md-3">
+                <div class="card">
+                <div class="card-img">
+                <img src="venue img/flower decor7.webp"  class="img-fluid" alt="" >
+                <div class="card-body">
+                    <h5 class="card-title">Flower Decoration</h5>
+                    <p class="card-text">For Day Function & more..</p>
+                    <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                  </div>                                   
+                </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="carousel-item vs">
+                <div class="col-md-3">
+                <div class="card">
+                <div class="card-img ">
+                <img src="venue img/flower decor8.webp"  class="img-fluid" alt="flower" > 
+                <div class="card-body">
+                    <h5 class="card-title">Flower Decoration</h5>
+                    <p class="card-text"> For Day Function & more.. </p>
+                    <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                  </div>                                  
+                </div>
+                </div>
+                </div>
+                </div>
+
+ 
+                <div class="carousel-item vs">
+                    <div class="col-md-3">
+                    <div class="card">
+                    <div class="card-img ">
+                    <img src="venue img/flower decor9.webp"  class="img-fluid" alt="flower" > 
+                    <div class="card-body">
+                        <h5 class="card-title">Flower Decoration</h5>
+                        <p class="card-text"> For Reception &more.. </p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>                                  
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+
+                     
+                <div class="carousel-item vs">
+                    <div class="col-md-3">
+                    <div class="card">
+                    <div class="card-img ">
+                    <img src="venue img/flower decor10.webp"  class="img-fluid" alt="flower" > 
+                    <div class="card-body">
+                        <h5 class="card-title">Flower Decoration</h5>
+                        <p class="card-text"> For Wedding Function & more... </p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>                                  
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+
+                     
+                <div class="carousel-item vs">
+                    <div class="col-md-3">
+                    <div class="card">
+                    <div class="card-img ">
+                    <img src="venue img/flower decor11.webp"  class="img-fluid" alt="flower" > 
+                    <div class="card-body">
+                        <h5 class="card-title">Flower Decoration</h5>
+                        <p class="card-text">For night party & more..</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>                                  
+                    </div>
+                    </div>
+                    </div>
+                    </div> 
+                  </div>   
+                
+
+                
+
+                <h3 class="haldi mt-5">Haldi Function Decoration</h3><br><br>
+                <div class="row">
+                  <div class="col-md-3 haldi--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi1.png"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Tent Decoration</h5>
+                          <p class="card-text"> starting price:10,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi2.png"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Curtain Tent Decoration</h5>
+                          <p class="card-text"> starting price:15,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi3.png"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Tent Hut Decoration</h5>
+                          <p class="card-text"> starting price:10,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-3 haldi--part4">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mom.PNG"   class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Theme Decoration</h5>
+                          <p class="card-text"> starting price:10,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part5">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi13.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Tub and Wall Decoration</h5>
+                          <p class="card-text"> starting price:20,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part6">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi6.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Tent Decoration with Umbrella</h5>
+                          <p class="card-text"> starting price:18,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part7">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi7.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">pool Decoration with flowers</h5>
+                          <p class="card-text"> starting price:15,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part8">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi8.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">pool Decoration with flowers</h5>
+                          <p class="card-text"> starting price:15,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part9">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi9.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Tent Decoration with greenary</h5>
+                          <p class="card-text"> starting price:18,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part10">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi10.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Table Decoration with yellow flowers</h5>
+                          <p class="card-text"> starting price:12,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-3 haldi--part11">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi11.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Yellow flowers Decoration</h5>
+                          <p class="card-text"> starting price:20,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 haldi--part12">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/haldi12.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple Curtain Decoration with ligths</h5>
+                          <p class="card-text"> starting price:18,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="mehendi decore mt-5">Mehndi Function Decoration</h3><br><br>
+                <div class="row">
+                  <div class="col-md-3 mehendi--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mehendi1.png" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Simple Green Tent Decoration</h5>
+                          <p class="card-text"> starting price:20,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mehendi--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mehendi2.jpg" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Circle Ring Decoration with flowers</h5>
+                          <p class="card-text"> starting price:15,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mehendi--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mehndi14.PNG" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple green pot and flowers Decoration</h5>
+                          <p class="card-text"> starting price:18,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-3 mehendi--part4">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mehndi16.PNG" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple Flower Decoration</h5>
+                          <p class="card-text"> starting price:10,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mehendi--part5">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mehendi9.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Wall Decoration with tent and flower </h5>
+                          <p class="card-text"> starting price:18,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mehendi--part6">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mehendi6.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">All greenary set with pink flowerDecoration</h5>
+                          <p class="card-text"> starting price:20,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mehendi--part7">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mehendi4.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple blue and pink  theme tent Decoration</h5>
+                          <p class="card-text"> starting price:20,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mehendi--part8">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mehendi11.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple greenary and pink flowers Decoration</h5>
+                          <p class="card-text"> starting price:20,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="sangeet decore mt-5">Sangeet Function Decoration</h3><br><br>
+                <div class="row">
+                  <div class="col-md-3 sangeet--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/sangeet14.jfif" class="img-fluid" alt="">
+                         <div class="card-body">
+                          <h5 class="card-title">Fully Lights Decoration</h5>
+                          <p class="card-text"> starting price:70,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 sangeet--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/sangeet2.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Flowers with light Decoration</h5>
+                          <p class="card-text"> starting price:50,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 sangeet--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/sangeet3.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple Light Decoration</h5>
+                          <p class="card-text"> starting price:40,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-3 sangeet--part4">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/sangeet4.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Hanging Light Decoration</h5>
+                          <p class="card-text"> starting price:50,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 sangeet--part5">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/sangeet5.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">3D light Decoration</h5>
+                          <p class="card-text"> starting price:60,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 sangeet--part6">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/sangeet6.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Peacock Light Decoration</h5>
+                          <p class="card-text"> starting price:50,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 sangeet--part7">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/sangeet7.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Wall light Decoration</h5>
+                          <p class="card-text"> starting price:50,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 sangeet--part8">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/sangeet8.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Curtain with Balloon light Decoration</h5>
+                          <p class="card-text"> starting price:80,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+
+                <h3 class="cock decore mt-5">Cocktail Party Decoration</h3><br><br>
+                <div class="row">
+                  <div class="col-md-3 cocktail--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/cocktail stage.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple wall decoration Decoration</h5>
+                          <p class="card-text"> starting price:30,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                 <div class="col-md-3 cocktail--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/cocktail1.1.jfif" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Serving Etiquette Decoration</h5>
+                          <p class="card-text"> starting price:20,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 cocktail--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/cocktail1.2.jfif"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Serving Soft drink Decoration</h5>
+                          <p class="card-text"> starting price:20,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 cocktail--part4">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/cocktail2.4.jfif" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Serving Hard Drink Decoration</h5>
+                          <p class="card-text"> starting price:30,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                 
+                  <div class="col-md-3 cocktail--part5">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/cocktail2.9.jfif" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Door light theme Decoration</h5>
+                          <p class="card-text"> starting price:70,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+
+                  <div class="col-md-3 cocktail--part6">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/cocktail3.2.jfif" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Cocktail Club Decoration</h5>
+                          <p class="card-text"> starting price:80,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+
+                  <div class="col-md-3 cocktail--part7">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/cocktail3.4.jfif" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Quotes Light Decoration</h5>
+                          <p class="card-text"> starting price:50,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+              
+                <div class="col-md-3 cocktail--part8">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/cocktail3.3.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Sitting Area Decoration with flowers</h5>
+                        <p class="card-text"> starting price:80,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+                </div>
+
+
+
+
+
+                <h3 class="reception decore mt-5">Reception Decoration</h3><br><br>
+                <div class="row">
+                  <div class="col-md-3 reception--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/reception.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Stairs light theme Decoration</h5>
+                          <p class="card-text"> starting price: 70,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                 <div class="col-md-3 reception--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/reception1.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Sitting Area Decoration with Lights</h5>
+                          <p class="card-text"> starting price:90,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 reception--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/reception2.webp"  class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Flower Pot Decoration with Lights</h5>
+                          <p class="card-text"> starting price:90,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 reception--part4">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/reception3.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Entrance Decoration with Flowers And Lights</h5>
+                          <p class="card-text"> starting price:1,00,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 reception--part5">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/reception4.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Sitting Area Decoration with Lights</h5>
+                          <p class="card-text"> starting price:90,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 reception--part6">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/reception5.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Hanging Light Decoration </h5>
+                          <p class="card-text"> starting price:80,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                   <div class="col-md-3 reception--part7">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/reception6.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Sitting Area Decoration with white flowers</h5>
+                          <p class="card-text"> starting price:70,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 reception--part8">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/reception7.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Tent Decoration with Lights</h5>
+                          <p class="card-text"> starting price:90,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                 
+                
+                </div>
+
+
+                
+                <h3 class="wed decore mt-5">Wedding Decoration</h3><br><br>
+                <div class="row">
+                  <div class="col-md-3 wedding--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/wedding decor1.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Tent House Theme Decoration</h5>
+                          <p class="card-text"> starting price: 70,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-3 wedding--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/party enter.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Entrance Sitting Decoration with Light</h5>
+                          <p class="card-text"> starting price: 1,00,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 wedding--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/party enter1.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Entrance Decoration With Hanging Light</h5>
+                          <p class="card-text"> starting price: 90,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                 <div class="col-md-3 wedding--part4">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/party enter2.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Entrance Cave Decoration With Flowers</h5>
+                          <p class="card-text"> starting price: 70,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+             
+
+                  <div class="col-md-3 wedding--part5">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/party night2.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Sitting Area Decoration With Lights</h5>
+                          <p class="card-text"> starting price: 50,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+          
+
+                  <div class="col-md-3 wedding--part6">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/party night5.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Light theme Decoration With Lamps</h5>
+                          <p class="card-text"> starting price: 70,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                 
+                  <div class="col-md-3 wedding--part7">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/party night6.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Decoration With Greenery And Lights</h5>
+                          <p class="card-text"> starting price: 90,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+
+
+
+                  <div class="col-md-3 wedding--part8">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/party night7.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Hanging Light Decoration With  Balls</h5>
+                          <p class="card-text"> starting price: 80,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+
+
+                </div>
+
+                <h3 class="mndap mt-5">Mandap Decoration</h3><br><br>
+                <div class="row">
+
+
+                  <div class="col-md-3 mandap--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mandap2.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Pink Flower Theme Decoration </h5>
+                          <p class="card-text"> starting price: 80,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 mandap--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/mandap3.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Hut Decoration With Flowers</h5>
+                          <p class="card-text"> starting price: 90,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-md-3 mandap--part3">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/mandap1.6.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title"> Mandap Decoration With Flowers</h5>
+                        <p class="card-text"> starting price: 1,00,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-3 mandap--part4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/mandap1.7.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Hanging Light Theme Decoration With Light </h5>
+                        <p class="card-text"> starting price: 1,00,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                  
+                <div class="col-md-3 mandap--part5">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/mandap5.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Mandap Decoration With Light and Flowers</h5>
+                        <p class="card-text"> starting price: 80,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+
+                  
+                <div class="col-md-3 mandap--part6">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/mandap11.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title"> Mandap with Pool Theme Decoration </h5>
+                        <p class="card-text"> starting price: 80,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+                  
+
+                  
+                <div class="col-md-3 mandap--part7">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/mandap9.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Royal Decoration With Light and Flowers</h5>
+                        <p class="card-text"> starting price: 1,00,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+                  
+                <div class="col-md-3 mandap--part8">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/mandap10.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Hanging Light  And Flower Decoration </h5>
+                        <p class="card-text"> starting price: 90,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+                </div>
+
+
+
+
+                <h3 class="pool mt-5">Pool Decoration</h3><br><br>
+                <div class="row">
+                  <div class="col-md-3 pool--part1">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/pool1.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title"> Pool Decoration with Lights </h5>
+                          <p class="card-text"> starting price: 50,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-3 pool--part2">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/pool2.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Pool Decoration with Hanging Lights </h5>
+                          <p class="card-text"> starting price: 80,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 pool--part3">
+                    <div class="card">
+                      <div class="card-img">
+                        <img src="venue img/pool3.webp" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">Simple Pool Decoration with Lights </h5>
+                          <p class="card-text"> starting price: 50,000Rs</p>
+                          <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <div class="col-md-3 pool--part4">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/pool4.webp" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Pool Decoration With 3D Lights </h5>
+                        <p class="card-text"> starting price: 80,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-3 pool--part5">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/pool5.webp" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Simple Pool Decoration With Lights </h5>
+                        <p class="card-text"> starting price: 40,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  
+                <div class="col-md-3 pool--part6">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/pool1.3.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title"> Pool Decoration With Flowers </h5>
+                        <p class="card-text"> starting price: 40,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                  
+                <div class="col-md-3 pool--part7">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/pool8.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Pool Decoration With Hanging Light Balls </h5>
+                        <p class="card-text"> starting price: 80,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+                  
+                <div class="col-md-3 pool--part8">
+                  <div class="card">
+                    <div class="card-img">
+                      <img src="venue img/pool9.jfif" class="img-fluid" alt="">
+                      <div class="card-body">
+                        <h5 class="card-title">Pool Decoration With Balloons</h5>
+                        <p class="card-text"> starting price: 80,000Rs</p>
+                        <a href="booking now.html"  class="card-full text-muted">Booking Now!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+
+                </div>
+
+
+
+
+
+   <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+                    </div>
+                </div>		
+            </div>
+
+
+            
+            <div class="footer bg-dark mt-5">
+              <div class="row text-center ">
+                <div class="col-md-6 mt-5 icon--call1">
+                  <img src="venue img/call-icon.png" alt="call"> Call : +9195XXXXXXXX
+                </div>
+                <div class="col-md-6 mt-5 icon--mail1">
+                  <img src="venue img/mail-icon.png" alt="mail"> Mail : info@vibe.com
+                </div>
+                <div class="col-md-6 mt-5 event--plan">
+                  <h5>Event Planning Service</h5>
+                  <p class="plan"><a href="birthday.html" class="bday">Birthday Planning</a>  |<a href="event.html" class="bday"> Event Planning</a>
+                    |<a href="gallery section.html" class="bday">   Party Supplies</a> |<br><a href="gallery section.html" class="bday">
+                  Wedding Planning </a> |<a href="gallery section.html" class="bday">   Reception Planning</a></p>
+                </div>
+            
+                <div class="col-md-6 mt-5 connected--with">
+                  <h5 class="stay">Stay Connected With Us:</h5>
+                  <a href="https://www.instagram.com"> <img src="venue img/instagram.png " alt="instagram" width="40px"></a>
+                  <a href="https://www.facebook.com"><img src="venue img/facebook.webp" alt="facebook" width="40px"></a>
+                   <a href="https://www.google.com"><img src="venue img/google.webp" alt="google" width="40px"></a>
+            
+                </div>
+            
+                <div class="col-md-12 mt-5 last--footer">
+                  <a href="home.html" class="home">Home |</a>  
+                  <a href="About us.html" class="home">About us |</a> 
+                  <a href="contact us.html" class="home">Contact us</a>  
+            
+                </div>
+            
+              </div>
+            
+            </div>
+
+
+            <script>
+              $(document).ready(function(){
+                $('.haldi--part1').waypoint(function(direction){
+                 $('.haldi--part1').addClass('animate__animated animate__fadeInDown ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.haldi--part2').waypoint(function(direction){
+                  $('.haldi--part2').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.haldi--part3').waypoint(function(direction){
+                  $('.haldi--part3').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.haldi--part4').waypoint(function(direction){
+                  $('.haldi--part4').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.haldi--part5').waypoint(function(direction){
+                  $('.haldi--part5').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.haldi--part6').waypoint(function(direction){
+                  $('.haldi--part6').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.haldi--part7').waypoint(function(direction){
+                  $('.haldi--part7').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.haldi--part8').waypoint(function(direction){
+                  $('.haldi--part8').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.haldi--part9').waypoint(function(direction){
+                  $('.haldi--part9').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.haldi--part10').waypoint(function(direction){
+                  $('.haldi--part10').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.haldi--part11').waypoint(function(direction){
+                  $('.haldi--part11').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+              $(document).ready(function(){
+                $('.haldi--part12').waypoint(function(direction){
+                  $('.haldi--part12').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+          
+          
+              $(document).ready(function(){
+                $('.mehendi--part1').waypoint(function(direction){
+                 $('.mehendi--part1').addClass('animate__animated animate__fadeInLeft ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.mehendi--part2').waypoint(function(direction){
+                  $('.mehendi--part2').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mehendi--part3').waypoint(function(direction){
+                  $('.mehendi--part3').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.mehendi--part4').waypoint(function(direction){
+                  $('.mehendi--part4').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mehendi--part5').waypoint(function(direction){
+                  $('.mehendi--part5').addClass('animate__animated animate__fadeInLeft  ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mehendi--part6').waypoint(function(direction){
+                  $('.mehendi--part6').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mehendi--part7').waypoint(function(direction){
+                  $('.mehendi--part7').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mehendi--part8').waypoint(function(direction){
+                  $('.mehendi--part8').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+          
+              $(document).ready(function(){
+                $('.sangeet--part1').waypoint(function(direction){
+                 $('.sangeet--part1').addClass('animate__animated  animate__fadeInRight ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.sangeet--part2').waypoint(function(direction){
+                  $('.sangeet--part2').addClass('animate__animated  animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.sangeet--part3').waypoint(function(direction){
+                  $('.sangeet--part3').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.sangeet--part4').waypoint(function(direction){
+                  $('.sangeet--part4').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.sangeet--part5').waypoint(function(direction){
+                  $('.sangeet--part5').addClass('animate__animated  animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.sangeet--part6').waypoint(function(direction){
+                  $('.sangeet--part6').addClass('animate__animated  animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.sangeet--part7').waypoint(function(direction){
+                  $('.sangeet--part7').addClass('animate__animated animate__fadeInLeft')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.sangeet--part8').waypoint(function(direction){
+                  $('.sangeet--part8').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+          
+              $(document).ready(function(){
+                $('.cocktail--part1').waypoint(function(direction){
+                 $('.cocktail--part1').addClass('animate__animated animate__fadeInDown ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.cocktail--part2').waypoint(function(direction){
+                  $('.cocktail--part2').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.cocktail--part3').waypoint(function(direction){
+                  $('.cocktail--part3').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.cocktail--part4').waypoint(function(direction){
+                  $('.cocktail--part4').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.cocktail--part5').waypoint(function(direction){
+                  $('.cocktail--part5').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.cocktail--part6').waypoint(function(direction){
+                  $('.cocktail--part6').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.cocktail--part7').waypoint(function(direction){
+                  $('.cocktail--part7').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.cocktail--part8').waypoint(function(direction){
+                  $('.cocktail--part8').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.reception--part1').waypoint(function(direction){
+                 $('.reception--part1').addClass('animate__animated animate__fadeInLeft ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.reception--part2').waypoint(function(direction){
+                  $('.reception--part2').addClass('animate__animated animate__fadeInLeft  ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.reception--part3').waypoint(function(direction){
+                  $('.reception--part3').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.reception--part4').waypoint(function(direction){
+                  $('.reception--part4').addClass('animate__animated animate__fadeInLeft ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.reception--part5').waypoint(function(direction){
+                  $('.reception--part5').addClass('animate__animated animate__fadeInRight  ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.reception--part6').waypoint(function(direction){
+                  $('.reception--part6').addClass('animate__animated animate__fadeInRight  ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.reception--part7').waypoint(function(direction){
+                  $('.reception--part7').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.reception--part8').waypoint(function(direction){
+                  $('.reception--part8').addClass('animate__animated animate__fadeInRight')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.wedding--part1').waypoint(function(direction){
+                 $('.wedding--part1').addClass('animate__animated animate__fadeInDown ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.wedding--part2').waypoint(function(direction){
+                  $('.wedding--part2').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.wedding--part3').waypoint(function(direction){
+                  $('.wedding--part3').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.wedding--part4').waypoint(function(direction){
+                  $('.wedding--part4').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.wedding--part5').waypoint(function(direction){
+                  $('.wedding--part5').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.wedding--part6').waypoint(function(direction){
+                  $('.wedding--part6').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.wedding--part7').waypoint(function(direction){
+                  $('.wedding--part7').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.wedding--part8').waypoint(function(direction){
+                  $('.wedding--part8').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.mandap--part1').waypoint(function(direction){
+                 $('.mandap--part1').addClass('animate__animated animate__fadeInLeft ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.mandap--part2').waypoint(function(direction){
+                  $('.mandap--part2').addClass('animate__animated animate__fadeInLeft  ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mandap--part3').waypoint(function(direction){
+                  $('.mandap--part3').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.mandap--part4').waypoint(function(direction){
+                  $('.mandap--part4').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mandap--part5').waypoint(function(direction){
+                  $('.mandap--part5').addClass('animate__animated animate__fadeInLeft  ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mandap--part6').waypoint(function(direction){
+                  $('.mandap--part6').addClass('animate__animated animate__fadeInLeft  ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mandap--part7').waypoint(function(direction){
+                  $('.mandap--part7').addClass('animate__animated animate__fadeInRight ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.mandap--part8').waypoint(function(direction){
+                  $('.mandap--part8').addClass('animate__animated animate__fadeInRight')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              $(document).ready(function(){
+                $('.pool--part1').waypoint(function(direction){
+                 $('.pool--part1').addClass('animate__animated animate__fadeInDown ')
+            
+                } ,{
+                  offset:'50%'
+                })
+              });
+              
+              $(document).ready(function(){
+                $('.pool--part2').waypoint(function(direction){
+                  $('.pool--part2').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.pool--part3').waypoint(function(direction){
+                  $('.pool--part3').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+                $(document).ready(function(){
+                $('.pool--part4').waypoint(function(direction){
+                  $('.pool--part4').addClass('animate__animated animate__fadeInDown ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.pool--part5').waypoint(function(direction){
+                  $('.pool--part5').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.pool--part6').waypoint(function(direction){
+                  $('.pool--part6').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.pool--part7').waypoint(function(direction){
+                  $('.pool--part7').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+          
+              $(document).ready(function(){
+                $('.pool--part8').waypoint(function(direction){
+                  $('.pool--part8').addClass('animate__animated animate__fadeInUp ')
+                } ,{
+                  offset:'50%'
+                })
+              });
+
+              
+          
+          
+             
+          
+              
+            
+              $(document).ready(function(){
+          $('.icon--call1').waypoint(function(direction){
+          $('.icon--call1').addClass('animate__animated animate__fadeInLeft animate__delay-1s')
+          } ,{
+          offset:'80%'
+          })
+          });
+          
+          $(document).ready(function(){
+          $('.icon--mail1').waypoint(function(direction){
+          $('.icon--mail1').addClass('animate__animated animate__fadeInRight animate__delay-1s')
+          } ,{
+          offset:'80%'
+          })
+          });
+          
+          $(document).ready(function(){
+          $('.event--plan').waypoint(function(direction){
+          $('.event--plan').addClass('animate__animated animate__fadeInLeft animate__delay-1s')
+          } ,{
+          offset:'80%'
+          })
+          });
+          
+          $(document).ready(function(){
+          $('.connected--with').waypoint(function(direction){
+          $('.connected--with').addClass('animate__animated animate__fadeInRight animate__delay-1s')
+          } ,{
+          offset:'80%'
+          })
+          });
+          
+          $(document).ready(function(){
+          $('.last--footer').waypoint(function(direction){
+          $('.last--footer').addClass('animate__animated animate__bounceIn animate__delay-1s')
+          } ,{
+          offset:'80%'
+          })
+          });
+          
+          
+          
+            
+            
+            
+              
+            
+            </script>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"> </script>
+ <script>
+
+    let items= document.querySelectorAll('.vs')
+    
+    items.forEach((el) => {
+        const minPerSlide = 4
+        let next = el.nextElementSibling
+        for (var i=1; i<minPerSlide; i++) {
+            if (!next) {
+        // wrap carousel by using first child
+        next = items[0]
+    }
+    let cloneChild = next.cloneNode(true)
+    el.appendChild(cloneChild.children[0])
+    next = next.nextElementSibling
+    }
+    })
+    
+    </script>
+
+        </body>
+</html>
